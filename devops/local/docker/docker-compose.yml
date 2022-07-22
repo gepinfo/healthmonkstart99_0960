@@ -209,7 +209,7 @@ services:
     image: systementry-0960
     container_name: systementry-0960
     ports: 
-      - 8010:8010
+      - 8018:8018
     env_file: .env
     depends_on:
       - mongo
@@ -225,7 +225,7 @@ services:
     image: foodmanager-0960
     container_name: foodmanager-0960
     ports: 
-      - 8011:8011
+      - 8019:8019
     env_file: .env
     depends_on:
       - mongo
@@ -241,7 +241,7 @@ services:
     image: personmanager-0960
     container_name: personmanager-0960
     ports: 
-      - 8012:8012
+      - 8020:8020
     env_file: .env
     depends_on:
       - mongo
@@ -257,7 +257,7 @@ services:
     image: nutrition-0960
     container_name: nutrition-0960
     ports: 
-      - 8013:8013
+      - 8021:8021
     env_file: .env
     depends_on:
       - mongo
@@ -273,7 +273,7 @@ services:
     image: medicationmanager-0960
     container_name: medicationmanager-0960
     ports: 
-      - 8014:8014
+      - 8022:8022
     env_file: .env
     depends_on:
       - mongo
@@ -289,7 +289,7 @@ services:
     image: prescriptionmanager-0960
     container_name: prescriptionmanager-0960
     ports: 
-      - 8015:8015
+      - 8023:8023
     env_file: .env
     depends_on:
       - mongo
@@ -305,7 +305,7 @@ services:
     image: workout-0960
     container_name: workout-0960
     ports: 
-      - 8016:8016
+      - 8024:8024
     env_file: .env
     depends_on:
       - mongo
@@ -321,7 +321,7 @@ services:
     image: sleeptrack-0960
     container_name: sleeptrack-0960
     ports: 
-      - 8017:8017
+      - 8025:8025
     env_file: .env
     depends_on:
       - mongo

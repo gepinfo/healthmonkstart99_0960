@@ -159,11 +159,11 @@ confirmLangModel(lang:any) {
 		}
 		}
 isApplicable(value:any) {
-		if (this.authArray !== undefined) {
-			return this.authArray.filter((routename: any) => routename == value).length > 0;
-		}
-        return false;
-    }
+        if (this.authArray !== undefined) {
+          return this.authArray.filter((routename: any) => routename == value).length > 0;
+        }
+            return false;
+        }
  logout() {
 		this.authArray = [];
 			 
