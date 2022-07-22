@@ -920,6 +920,156 @@ export const resource_types = [
     }]
   },
   {
+    "resource_name": "Sleep Goal",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
+    "resource_name": "sleep track landing section",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
+    "resource_name": "edit the Recommended",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
+    "resource_name": "popup screen date ",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
+    "resource_name": "deleted the data ",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
+    "resource_name": "popup screen time",
+    "resource_type": "screen",
+    "roles": [
+      "admin", "user"
+    ],
+    "components": [{
+      "label_1425": {
+        "id": "878979",
+        "roles": [ "admin" ]
+      },
+      "textbox_6272": {
+        "id": "135979",
+        "roles": [ "admin" ]
+      },
+      "label_2437": {
+        "id": "343979",
+        "roles": [ "admin" ]
+      },
+      "dropdown_73821": {
+        "id": "738291",
+        "roles": [ "admin" ]
+      }
+    }]
+  },
+  {
     "resource_name": "exercisescr",
     "resource_type": "screen",
     "roles": [
@@ -1121,156 +1271,6 @@ export const resource_types = [
   },
   {
     "resource_name": "after deleting swimming section",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "Sleep Goal",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "sleep track landing section",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "edit the Recommended",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "popup screen date ",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "deleted the data ",
-    "resource_type": "screen",
-    "roles": [
-      "admin", "user"
-    ],
-    "components": [{
-      "label_1425": {
-        "id": "878979",
-        "roles": [ "admin" ]
-      },
-      "textbox_6272": {
-        "id": "135979",
-        "roles": [ "admin" ]
-      },
-      "label_2437": {
-        "id": "343979",
-        "roles": [ "admin" ]
-      },
-      "dropdown_73821": {
-        "id": "738291",
-        "roles": [ "admin" ]
-      }
-    }]
-  },
-  {
-    "resource_name": "popup screen time",
     "resource_type": "screen",
     "roles": [
       "admin", "user"
