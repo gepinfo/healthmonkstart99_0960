@@ -7,14 +7,7 @@ export class medicationController {
     
     constructor() { }
     
-    public GpCreate(req: Request, res: Response) {
-medication.GpCreate(req, (response) => {
-                new CustomLogger().showLogger('info', 'Enter into medicationController.ts: GpCreate');
-     res.status(200);
-     res.json(response);
-                new CustomLogger().showLogger('info', 'Exit from medicationController.ts: GpCreate');
-    })}
-public GpDelete(req: Request, res: Response) {
+    public GpDelete(req: Request, res: Response) {
 medication.GpDelete(req, (response) => {
                 new CustomLogger().showLogger('info', 'Enter into medicationController.ts: GpDelete');
      res.status(200);

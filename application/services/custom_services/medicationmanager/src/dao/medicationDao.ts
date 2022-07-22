@@ -7,24 +7,7 @@ export class medicationDao {
     private medication = medicationModel;
     constructor() { }
     
-    public async GpCreate(medicationData, callback){
-    
-    new CustomLogger().showLogger('info', 'Enter into medicationDao.ts: GpCreate');
-
-    let temp = new medicationModel(medicationData);
-
-    
-    
-    
-    temp.save().then((result)	=>	{
-
-        new CustomLogger().showLogger('info', 'Exit from medicationDao.ts: GpCreate');
-
-        callback(result);
-}).catch((error)=>{
-callback(error);
-});}
-public async GpDelete(medicationId, callback){
+    public async GpDelete(medicationId, callback){
     
     new CustomLogger().showLogger('info', 'Enter into medicationDao.ts: GpDelete');
 

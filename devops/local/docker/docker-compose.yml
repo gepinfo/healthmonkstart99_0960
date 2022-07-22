@@ -141,10 +141,6 @@ services:
       - personmanager
       - nutrition
       - medicationmanager
-      - medicationmanager
-      - medicationmanager
-      - prescriptionmanager
-      - prescriptionmanager
       - prescriptionmanager
       - workout
       - sleeptrack
@@ -213,7 +209,7 @@ services:
     image: systementry-0960
     container_name: systementry-0960
     ports: 
-      - 8014:8014
+      - 8010:8010
     env_file: .env
     depends_on:
       - mongo
@@ -229,7 +225,7 @@ services:
     image: foodmanager-0960
     container_name: foodmanager-0960
     ports: 
-      - 8015:8015
+      - 8011:8011
     env_file: .env
     depends_on:
       - mongo
@@ -245,7 +241,7 @@ services:
     image: personmanager-0960
     container_name: personmanager-0960
     ports: 
-      - 8016:8016
+      - 8012:8012
     env_file: .env
     depends_on:
       - mongo
@@ -261,7 +257,7 @@ services:
     image: nutrition-0960
     container_name: nutrition-0960
     ports: 
-      - 8017:8017
+      - 8013:8013
     env_file: .env
     depends_on:
       - mongo
@@ -277,39 +273,7 @@ services:
     image: medicationmanager-0960
     container_name: medicationmanager-0960
     ports: 
-      - 8018:8018
-    env_file: .env
-    depends_on:
-      - mongo
-    logging:
-      driver: "fluentd"
-      options:
-        fluentd-address: 0.0.0.0:24224
-        fluentd-async-connect: "true"
-        tag: fluent
-
-  medicationmanager: 
-    build: ../../../application/services/custom_services/medicationmanager
-    image: medicationmanager-0960
-    container_name: medicationmanager-0960
-    ports: 
-      - 8019:8019
-    env_file: .env
-    depends_on:
-      - mongo
-    logging:
-      driver: "fluentd"
-      options:
-        fluentd-address: 0.0.0.0:24224
-        fluentd-async-connect: "true"
-        tag: fluent
-
-  medicationmanager: 
-    build: ../../../application/services/custom_services/medicationmanager
-    image: medicationmanager-0960
-    container_name: medicationmanager-0960
-    ports: 
-      - 8019:8019
+      - 8014:8014
     env_file: .env
     depends_on:
       - mongo
@@ -325,39 +289,7 @@ services:
     image: prescriptionmanager-0960
     container_name: prescriptionmanager-0960
     ports: 
-      - 8019:8019
-    env_file: .env
-    depends_on:
-      - mongo
-    logging:
-      driver: "fluentd"
-      options:
-        fluentd-address: 0.0.0.0:24224
-        fluentd-async-connect: "true"
-        tag: fluent
-
-  prescriptionmanager: 
-    build: ../../../application/services/custom_services/prescriptionmanager
-    image: prescriptionmanager-0960
-    container_name: prescriptionmanager-0960
-    ports: 
-      - 8021:8021
-    env_file: .env
-    depends_on:
-      - mongo
-    logging:
-      driver: "fluentd"
-      options:
-        fluentd-address: 0.0.0.0:24224
-        fluentd-async-connect: "true"
-        tag: fluent
-
-  prescriptionmanager: 
-    build: ../../../application/services/custom_services/prescriptionmanager
-    image: prescriptionmanager-0960
-    container_name: prescriptionmanager-0960
-    ports: 
-      - 8022:8022
+      - 8015:8015
     env_file: .env
     depends_on:
       - mongo
@@ -373,7 +305,7 @@ services:
     image: workout-0960
     container_name: workout-0960
     ports: 
-      - 8023:8023
+      - 8016:8016
     env_file: .env
     depends_on:
       - mongo
@@ -389,7 +321,7 @@ services:
     image: sleeptrack-0960
     container_name: sleeptrack-0960
     ports: 
-      - 8025:8025
+      - 8017:8017
     env_file: .env
     depends_on:
       - mongo

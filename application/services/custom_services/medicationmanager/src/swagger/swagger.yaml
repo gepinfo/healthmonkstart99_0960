@@ -13,12 +13,53 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8019
+   - url: http://localhost:8014
      description: medicationmanager
 tags:
 - name: medication
   description: represents a medicine
 paths:
+   "/medication/{id}":
+      delete:
+         tags:
+         -  medication
+         description: GpDelete
+         parameters:
+         -  in: "path"
+            description: GpDelete
+            name: id
+            required: true
+            schema:
+               type: "string"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      get:
+         tags:
+         -  medication
+         description: GpGetNounById
+         parameters:
+         -  in: "path"
+            description: GpGetNounById
+            name: id
+            required: true
+            schema:
+               type: "string"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
    "/medication/get/search":
       get:
          tags:
@@ -93,27 +134,6 @@ paths:
                application/json:
                   schema:
                      $ref: "#/components/schemas/medication"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-   "/medication/{id}":
-      get:
-         tags:
-         -  medication
-         description: GpGetNounById
-         parameters:
-         -  in: "path"
-            description: GpGetNounById
-            name: id
-            required: true
-            schema:
-               type: "string"
          responses:
             200:
                description: Success

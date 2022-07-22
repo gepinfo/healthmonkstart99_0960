@@ -54,74 +54,50 @@ service:
   systementry: 
     name: systementry
     type: NodePort
-    port: 8014
-    targetPort: 8014
+    port: 8010
+    targetPort: 8010
 
   foodmanager: 
     name: foodmanager
     type: NodePort
-    port: 8015
-    targetPort: 8015
+    port: 8011
+    targetPort: 8011
 
   personmanager: 
     name: personmanager
     type: NodePort
-    port: 8016
-    targetPort: 8016
+    port: 8012
+    targetPort: 8012
 
   nutrition: 
     name: nutrition
     type: NodePort
-    port: 8017
-    targetPort: 8017
+    port: 8013
+    targetPort: 8013
 
   medicationmanager: 
     name: medicationmanager
     type: NodePort
-    port: 8018
-    targetPort: 8018
-
-  medicationmanager: 
-    name: medicationmanager
-    type: NodePort
-    port: 8019
-    targetPort: 8019
-
-  medicationmanager: 
-    name: medicationmanager
-    type: NodePort
-    port: 8019
-    targetPort: 8019
+    port: 8014
+    targetPort: 8014
 
   prescriptionmanager: 
     name: prescriptionmanager
     type: NodePort
-    port: 8019
-    targetPort: 8019
-
-  prescriptionmanager: 
-    name: prescriptionmanager
-    type: NodePort
-    port: 8021
-    targetPort: 8021
-
-  prescriptionmanager: 
-    name: prescriptionmanager
-    type: NodePort
-    port: 8022
-    targetPort: 8022
+    port: 8015
+    targetPort: 8015
 
   workout: 
     name: workout
     type: NodePort
-    port: 8023
-    targetPort: 8023
+    port: 8016
+    targetPort: 8016
 
   sleeptrack: 
     name: sleeptrack
     type: NodePort
-    port: 8025
-    targetPort: 8025
+    port: 8017
+    targetPort: 8017
 
 
 deployment:
@@ -167,22 +143,6 @@ deployment:
   medicationmanager: 
     name: medicationmanager
     image: geppettotest/healthmonkstart99-medicationmanager:1.0
-
-  medicationmanager: 
-    name: medicationmanager
-    image: geppettotest/healthmonkstart99-medicationmanager:1.0
-
-  medicationmanager: 
-    name: medicationmanager
-    image: geppettotest/healthmonkstart99-medicationmanager:1.0
-
-  prescriptionmanager: 
-    name: prescriptionmanager
-    image: geppettotest/healthmonkstart99-prescriptionmanager:1.0
-
-  prescriptionmanager: 
-    name: prescriptionmanager
-    image: geppettotest/healthmonkstart99-prescriptionmanager:1.0
 
   prescriptionmanager: 
     name: prescriptionmanager

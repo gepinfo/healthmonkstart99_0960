@@ -47,10 +47,6 @@ jobs:
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-personmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-nutrition --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-medicationmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
-          aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-medicationmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
-          aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-medicationmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
-          aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
-          aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-workout --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
           aws ecr create-repository --repository-name geppetto-generatedcode-healthmonkstart99-0960-sleeptrack --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} --region us-east-1
@@ -130,22 +126,6 @@ jobs:
           docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG .
           docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG
           echo "Successfully build the docker image for medicationmanager and pushed to aws ecr"
-          cd ../medicationmanager
-          docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG
-          echo "Successfully build the docker image for medicationmanager and pushed to aws ecr"
-          cd ../medicationmanager
-          docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-medicationmanager:$IMAGE_TAG
-          echo "Successfully build the docker image for medicationmanager and pushed to aws ecr"
-          cd ../prescriptionmanager
-          docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG
-          echo "Successfully build the docker image for prescriptionmanager and pushed to aws ecr"
-          cd ../prescriptionmanager
-          docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG
-          echo "Successfully build the docker image for prescriptionmanager and pushed to aws ecr"
           cd ../prescriptionmanager
           docker build -t $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG .
           docker push $ECR_REGISTRY/geppetto-generatedcode-healthmonkstart99-0960-prescriptionmanager:$IMAGE_TAG
@@ -183,7 +163,6 @@ jobs:
         run: |
           AWS_ACCOUNT_ID="${{ env.AWS_ACCOUNT_ID }}" AWS_ROLE_FOR_FARGATE="${{ env.AWS_ROLE_FOR_FARGATE }}" EFS_ID="${{ steps.EfsID.outputs.FILESYSTEM_ID }}" node task-definition.ts >> task-definition.json
           AWS_ACCOUNT_ID0="${{ env.AWS_ACCOUNT_ID }}" AWS_ROLE_FOR_FARGATE="${{ env.AWS_ROLE_FOR_FARGATE }}" EFS_ID="${{ steps.EfsID.outputs.FILESYSTEM_ID }}" node task-definition_0.ts >> task-definition_0.json
-          AWS_ACCOUNT_ID1="${{ env.AWS_ACCOUNT_ID }}" AWS_ROLE_FOR_FARGATE="${{ env.AWS_ROLE_FOR_FARGATE }}" EFS_ID="${{ steps.EfsID.outputs.FILESYSTEM_ID }}" node task-definition_10.ts >> task-definition_10.json
       #------------- AWS Credentials Configuration ----------------#
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -199,7 +178,6 @@ jobs:
 
           echo "::set-output name=SD_ARN::$(aws servicediscovery create-service --name healthmonkstart99 --namespace-id ${{ env.SERVICE_DISCOVERY_NAMESPACE }}   --dns-config "NamespaceId=${{ env.SERVICE_DISCOVERY_NAMESPACE }} ,RoutingPolicy=MULTIVALUE,DnsRecords=[{Type=A,TTL=60}]" --description "Service discovery for ${{ env.PROJECT_NAME }} project" --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} | jq -r '.Service.Arn')"
           echo "::set-output name=SD_ARN0::$(aws servicediscovery create-service --name healthmonkstart990 --namespace-id ${{ env.SERVICE_DISCOVERY_NAMESPACE }}   --dns-config "NamespaceId=${{ env.SERVICE_DISCOVERY_NAMESPACE }} ,RoutingPolicy=MULTIVALUE,DnsRecords=[{Type=A,TTL=60}]" --description "Service discovery for ${{ env.PROJECT_NAME }} project" --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} | jq -r '.Service.Arn')"
-          echo "::set-output name=SD_ARN1::$(aws servicediscovery create-service --name healthmonkstart9910 --namespace-id ${{ env.SERVICE_DISCOVERY_NAMESPACE }}   --dns-config "NamespaceId=${{ env.SERVICE_DISCOVERY_NAMESPACE }} ,RoutingPolicy=MULTIVALUE,DnsRecords=[{Type=A,TTL=60}]" --description "Service discovery for ${{ env.PROJECT_NAME }} project" --tags Key=project_name,Value=${{ env.PROJECT_NAME }} Key=name,Value=${{ env.PROJECT_NAME }} | jq -r '.Service.Arn')"
       #------------- Amazon ECS task definition each file ----------------#
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
@@ -229,19 +207,6 @@ jobs:
           task-definition: ${{ steps.task-def0.outputs.task-definition }}
           cluster: ${{  env.AWS_ECS_CLUSTER_NAME  }}
           wait-for-service-stability: true
-      - name: Fill in the new image ID in the Amazon ECS task definition
-        id: task-def1
-        uses: aws-actions/amazon-ecs-render-task-definition@v1
-        with:
-          task-definition: .github/workflows/task-definition_10.json
-          container-name: sleeptrack-0960
-          image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-healthmonkstart99-0960-sleeptrack:latest
-      - name: Deploy Amazon ECS task definition
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
-          task-definition: ${{ steps.task-def1.outputs.task-definition }}
-          cluster: ${{  env.AWS_ECS_CLUSTER_NAME  }}
-          wait-for-service-stability: true
       
       #------------- Amazon ECS task definition connect servicediscovery ----------------#
       - name: Deploying ECS task definition with Service
@@ -249,7 +214,6 @@ jobs:
           aws ecs create-service --cluster ${{  env.AWS_ECS_CLUSTER_NAME  }} --service-name healthmonkstart99 --task-definition healthmonkstart99 --desired-count 1 --launch-type FARGATE --platform-version LATEST --network-configuration "awsvpcConfiguration={subnets=[${{ env.AWS_VPC_SUBNET }}],securityGroups=[${{ env.AWS_VPC_SECURITY_GROUP }}],assignPublicIp=ENABLED}" --service-registries '{"registryArn":"${{ steps.SD_ARN.outputs.SD_ARN }}"}' --tags key=project_name,value=${{ env.PROJECT_NAME }}
           sleep 60s
           aws ecs create-service --cluster ${{  env.AWS_ECS_CLUSTER_NAME  }} --service-name healthmonkstart990 --task-definition healthmonkstart990 --desired-count 1 --launch-type FARGATE --platform-version LATEST --network-configuration "awsvpcConfiguration={subnets=[${{ env.AWS_VPC_SUBNET }}],securityGroups=[${{ env.AWS_VPC_SECURITY_GROUP }}],assignPublicIp=ENABLED}" --service-registries '{"registryArn":"${{ steps.SD_ARN.outputs.SD_ARN0 }}"}' --tags key=project_name,value=${{ env.PROJECT_NAME }}
-          aws ecs create-service --cluster ${{  env.AWS_ECS_CLUSTER_NAME  }} --service-name healthmonkstart991 --task-definition healthmonkstart991 --desired-count 1 --launch-type FARGATE --platform-version LATEST --network-configuration "awsvpcConfiguration={subnets=[${{ env.AWS_VPC_SUBNET }}],securityGroups=[${{ env.AWS_VPC_SECURITY_GROUP }}],assignPublicIp=ENABLED}" --service-registries '{"registryArn":"${{ steps.SD_ARN.outputs.SD_ARN1 }}"}' --tags key=project_name,value=${{ env.PROJECT_NAME }}
           sleep 20s
 
       - name: Get ECS Task IP Address

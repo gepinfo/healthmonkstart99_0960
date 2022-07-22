@@ -15,10 +15,6 @@ import {
     persondetailsController,
     nutritiondetailsController,
     medicationController,
-    medicationController,
-    medicationController,
-    prescriptionController,
-    prescriptionController,
     prescriptionController,
     excerisedetailsController,
     sleeptrackdetailsController
@@ -37,10 +33,6 @@ let apisController = [
     new persondetailsController(),
     new nutritiondetailsController(),
     new medicationController(),
-    new medicationController(),
-    new medicationController(),
-    new prescriptionController(),
-    new prescriptionController(),
     new prescriptionController(),
     new excerisedetailsController(),
     new sleeptrackdetailsController()

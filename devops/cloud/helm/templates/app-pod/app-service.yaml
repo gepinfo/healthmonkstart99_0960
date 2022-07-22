@@ -40,22 +40,6 @@ spec:
     port: {{ .Values.service.medicationmanager.port }}
     targetPort: {{ .Values.service.medicationmanager.targetPort }}
 
-  - name: {{ .Values.service.medicationmanager.name }}
-    port: {{ .Values.service.medicationmanager.port }}
-    targetPort: {{ .Values.service.medicationmanager.targetPort }}
-
-  - name: {{ .Values.service.medicationmanager.name }}
-    port: {{ .Values.service.medicationmanager.port }}
-    targetPort: {{ .Values.service.medicationmanager.targetPort }}
-
-  - name: {{ .Values.service.prescriptionmanager.name }}
-    port: {{ .Values.service.prescriptionmanager.port }}
-    targetPort: {{ .Values.service.prescriptionmanager.targetPort }}
-
-  - name: {{ .Values.service.prescriptionmanager.name }}
-    port: {{ .Values.service.prescriptionmanager.port }}
-    targetPort: {{ .Values.service.prescriptionmanager.targetPort }}
-
   - name: {{ .Values.service.prescriptionmanager.name }}
     port: {{ .Values.service.prescriptionmanager.port }}
     targetPort: {{ .Values.service.prescriptionmanager.targetPort }}

@@ -8,16 +8,7 @@ export class medicationService {
     
     constructor() { }
     
-    public  GpCreate(req: Request, callback){
-    new CustomLogger().showLogger('info', 'Enter into medicationService.ts: GpCreate')
-     let  medicationData = req.body;
-     medication.GpCreate(medicationData,(response)=>{
-             new CustomLogger().showLogger('info', 'Exit from medicationService.ts: GpCreate')
-         callback(response);
-         });
-    }
-    
-public  GpDelete(req: Request, callback){
+    public  GpDelete(req: Request, callback){
     new CustomLogger().showLogger('info', 'Enter into medicationService.ts: GpDelete')
      let  medicationId = req.params.id;
      medication.GpDelete(medicationId,(response)=>{

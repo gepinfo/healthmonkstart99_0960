@@ -6,6 +6,18 @@
     ,
 {"resources":"sefscreen", "role":"Guest"}
     ,
+{"resources":"persondetails", "role":"Guest"}
+    ,
+{"resources":"BMI Details", "role":"Guest"}
+    ,
+{"resources":"Active Details", "role":"Guest"}
+    ,
+{"resources":"Summery Screens", "role":"Guest"}
+    ,
+{"resources":"Person Details 1", "role":"Guest"}
+    ,
+{"resources":"bmi Details 1", "role":"Guest"}
+    ,
 {"resources":"Nutration drink details", "role":"Guest"}
     ,
 {"resources":"select food details", "role":"Guest"}
@@ -31,18 +43,6 @@
 {"resources":"My Meal / Breakfast ", "role":"Guest"}
     ,
 {"resources":"edited details popup screen", "role":"Guest"}
-    ,
-{"resources":"persondetails", "role":"Guest"}
-    ,
-{"resources":"BMI Details", "role":"Guest"}
-    ,
-{"resources":"Active Details", "role":"Guest"}
-    ,
-{"resources":"Summery Screens", "role":"Guest"}
-    ,
-{"resources":"Person Details 1", "role":"Guest"}
-    ,
-{"resources":"bmi Details 1", "role":"Guest"}
     ,
 {"resources":"exercisescr", "role":"Guest"}
     ,

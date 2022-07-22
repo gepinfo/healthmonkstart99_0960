@@ -13,8 +13,7 @@ export class medicationController implements Controller {
     }
 
     private initializeRoutes() {
-        this.router.post('/medication', this.GpCreate);
-this.router.delete('/medication/:id', this.GpDelete);
+        this.router.delete('/medication/:id', this.GpDelete);
 this.router.get('/medication/get/search', this.GpSearch);
 this.router.put('/medication/get/update', this.GpSearchForUpdate);
 this.router.put('/medication', this.GpUpdate);
@@ -23,17 +22,6 @@ this.router.get('/medication', this.GpGetAllValues);
 this.router.post('/medication', this.GpCreate);
     }
 
-public GpCreate(req: Request, res: Response) {
-            new CustomLogger().showLogger('info', 'Enter into medicationController.ts: GpCreate');
-        new ApiAdapter().post(Constant.MEDICATIONMANAGERURL + `${req.url}` , req.body)
-        .then((res: any) => res.response.json()).then(result => {
-              req.baseUrl === '/mobile' ? res.send(result) :
-              req.baseUrl === '/web' ? res.send(result) : res.send(null)
-            new CustomLogger().showLogger('info', 'Exit from medicationController.ts: GpCreate');
-        }).catch(err => {
-            res.send(err);
-        });
-    }
 public GpDelete(req: Request, res: Response) {
             new CustomLogger().showLogger('info', 'Enter into medicationController.ts: GpDelete');
         new ApiAdapter().delete(Constant.MEDICATIONMANAGERURL + `${req.url}` )

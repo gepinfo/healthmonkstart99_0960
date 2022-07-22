@@ -69,7 +69,7 @@ spec:
           image: {{ .Values.deployment.systementry.image }}
           ports:
             - name: http-port
-              containerPort: 8014
+              containerPort: 8010
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -81,7 +81,7 @@ spec:
           image: {{ .Values.deployment.foodmanager.image }}
           ports:
             - name: http-port
-              containerPort: 8015
+              containerPort: 8011
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -93,7 +93,7 @@ spec:
           image: {{ .Values.deployment.personmanager.image }}
           ports:
             - name: http-port
-              containerPort: 8016
+              containerPort: 8012
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -105,7 +105,7 @@ spec:
           image: {{ .Values.deployment.nutrition.image }}
           ports:
             - name: http-port
-              containerPort: 8017
+              containerPort: 8013
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -117,31 +117,7 @@ spec:
           image: {{ .Values.deployment.medicationmanager.image }}
           ports:
             - name: http-port
-              containerPort: 8018
-          env:
-            - name: {{ .Values.app.prefix }}-app-db
-              value: {{ .Values.app.prefix }}-app-db
-            - name: MONGO_DB_URL
-              value: "mongodb://{{ .Values.app.prefix }}-app-db.{{ .Values.app.prefix }}.svc.cluster.local:27017/{{ .Values.app.prefix }}"
-
-        - name: {{ .Values.deployment.medicationmanager.name }}-container
-          imagePullPolicy: {{ .Values.deployment.customImagePullPolicy }}
-          image: {{ .Values.deployment.medicationmanager.image }}
-          ports:
-            - name: http-port
-              containerPort: 8019
-          env:
-            - name: {{ .Values.app.prefix }}-app-db
-              value: {{ .Values.app.prefix }}-app-db
-            - name: MONGO_DB_URL
-              value: "mongodb://{{ .Values.app.prefix }}-app-db.{{ .Values.app.prefix }}.svc.cluster.local:27017/{{ .Values.app.prefix }}"
-
-        - name: {{ .Values.deployment.medicationmanager.name }}-container
-          imagePullPolicy: {{ .Values.deployment.customImagePullPolicy }}
-          image: {{ .Values.deployment.medicationmanager.image }}
-          ports:
-            - name: http-port
-              containerPort: 8019
+              containerPort: 8014
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -153,31 +129,7 @@ spec:
           image: {{ .Values.deployment.prescriptionmanager.image }}
           ports:
             - name: http-port
-              containerPort: 8019
-          env:
-            - name: {{ .Values.app.prefix }}-app-db
-              value: {{ .Values.app.prefix }}-app-db
-            - name: MONGO_DB_URL
-              value: "mongodb://{{ .Values.app.prefix }}-app-db.{{ .Values.app.prefix }}.svc.cluster.local:27017/{{ .Values.app.prefix }}"
-
-        - name: {{ .Values.deployment.prescriptionmanager.name }}-container
-          imagePullPolicy: {{ .Values.deployment.customImagePullPolicy }}
-          image: {{ .Values.deployment.prescriptionmanager.image }}
-          ports:
-            - name: http-port
-              containerPort: 8021
-          env:
-            - name: {{ .Values.app.prefix }}-app-db
-              value: {{ .Values.app.prefix }}-app-db
-            - name: MONGO_DB_URL
-              value: "mongodb://{{ .Values.app.prefix }}-app-db.{{ .Values.app.prefix }}.svc.cluster.local:27017/{{ .Values.app.prefix }}"
-
-        - name: {{ .Values.deployment.prescriptionmanager.name }}-container
-          imagePullPolicy: {{ .Values.deployment.customImagePullPolicy }}
-          image: {{ .Values.deployment.prescriptionmanager.image }}
-          ports:
-            - name: http-port
-              containerPort: 8022
+              containerPort: 8015
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -189,7 +141,7 @@ spec:
           image: {{ .Values.deployment.workout.image }}
           ports:
             - name: http-port
-              containerPort: 8023
+              containerPort: 8016
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -201,7 +153,7 @@ spec:
           image: {{ .Values.deployment.sleeptrack.image }}
           ports:
             - name: http-port
-              containerPort: 8025
+              containerPort: 8017
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
