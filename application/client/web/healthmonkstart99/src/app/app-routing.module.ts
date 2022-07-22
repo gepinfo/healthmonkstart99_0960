@@ -32,12 +32,6 @@ const routes: Routes = [
        { path: '', component: TemplateComponent, pathMatch: 'full'   } ,
 { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 
-{ path : 'persondetails', loadChildren: () => import('./persondetails/persondetails.module').then(m => m.PersondetailsModule), canActivate: [AuthGuard] } , 
-{ path : 'bmidetails', loadChildren: () => import('./bmidetails/bmidetails.module').then(m => m.BmidetailsModule), canActivate: [AuthGuard] } , 
-{ path : 'activedetails', loadChildren: () => import('./activedetails/activedetails.module').then(m => m.ActivedetailsModule), canActivate: [AuthGuard] } , 
-{ path : 'summeryscreens', loadChildren: () => import('./summeryscreens/summeryscreens.module').then(m => m.SummeryscreensModule), canActivate: [AuthGuard] } , 
-{ path : 'persondetails1', loadChildren: () => import('./persondetails1/persondetails1.module').then(m => m.Persondetails1Module), canActivate: [AuthGuard] } , 
-{ path : 'bmidetails1', loadChildren: () => import('./bmidetails1/bmidetails1.module').then(m => m.Bmidetails1Module), canActivate: [AuthGuard] } , 
 ];
 
 @NgModule({

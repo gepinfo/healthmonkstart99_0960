@@ -44,18 +44,6 @@
     ,
 {"resources":"edited details popup screen", "role":"Guest"}
     ,
-{"resources":"Sleep Goal", "role":"Guest"}
-    ,
-{"resources":"sleep track landing section", "role":"Guest"}
-    ,
-{"resources":"edit the Recommended", "role":"Guest"}
-    ,
-{"resources":"popup screen date ", "role":"Guest"}
-    ,
-{"resources":"deleted the data ", "role":"Guest"}
-    ,
-{"resources":"popup screen time", "role":"Guest"}
-    ,
 {"resources":"exercisescr", "role":"Guest"}
     ,
 {"resources":"track workout front screen ", "role":"Guest"}
